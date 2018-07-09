@@ -28,8 +28,8 @@ void Dog::petAnimal() {
 }
 void Dog::playAnimal() {
 	Animal::playAnimal();
-		std::cout << "playing the branch" << std::endl;
+		std::cout << "play the branch" << std::endl;
 }
 void Dog::feedAnimal() {
-	std::cout << "giving the bounes" << std::endl;
+	std::cout << "givi the bounes" << std::endl;
 }

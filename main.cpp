@@ -1,6 +1,7 @@
 #include "animal.hpp"
 #include <iostream>
 #include "dog.hpp"
+#include "cat.hpp"
 
 int main(int argc, char const *argv[])
 {
@@ -18,5 +19,13 @@ int main(int argc, char const *argv[])
 	bobby->playAnimal();
 	bobby->feedAnimal();
 	delete bobby;
+
+	std::cout << std::endl;
+
+	Cat topor = Cat("Topor");
+	topor.petAnimal();
+	topor.playAnimal();
+	topor.feedAnimal();
+	std::cout << topor.getColor() << std::endl;
 	return 0;
 }
