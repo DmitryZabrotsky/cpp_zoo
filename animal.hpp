@@ -2,6 +2,7 @@
 # define ANIMAL_HPP
 
 # include <string>
+# include "gender.hpp"
 
 class Animal
 {
@@ -11,6 +12,7 @@ protected:
 	std::string color;
 	std::string name;
 	int			age;
+	Gender 		gender;
 
 public:
 	Animal();
@@ -23,6 +25,9 @@ public:
 	virtual void playAnimal();
 	virtual void feedAnimal();
 	std::string const	&getColor() const;
+	void showGender();
+	void setGender(Gender gender);
+	void setColor(std::string color);
 
 };
 

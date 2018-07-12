@@ -18,6 +18,7 @@ public:
 	virtual void petAnimal();
 	virtual void playAnimal();
 	virtual void feedAnimal();
+	static Dog *getChild(Dog &parent1, Dog &parent2);
 };
 
 #endif

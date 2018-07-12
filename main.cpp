@@ -10,6 +10,7 @@ int main(int argc, char const *argv[])
 	rob.petAnimal();
 	rob.playAnimal();
 	rob.feedAnimal();
+	rob.setGender(Gender::male);
 	std::cout << rob.getColor() << std::endl;
 
 	std::cout << std::endl;
@@ -18,7 +19,8 @@ int main(int argc, char const *argv[])
 	bobby->petAnimal();
 	bobby->playAnimal();
 	bobby->feedAnimal();
-	delete bobby;
+	bobby->setGender(Gender::female);
+	std::cout << bobby->getColor() << std::endl;
 
 	std::cout << std::endl;
 
@@ -27,5 +29,16 @@ int main(int argc, char const *argv[])
 	topor.playAnimal();
 	topor.feedAnimal();
 	std::cout << topor.getColor() << std::endl;
+	topor.showGender();
+	topor.setGender(Gender::male);
+	topor.showGender();
+
+	std::cout << std::endl;
+
+	Dog *puppy = Dog::getChild(rob, *(dynamic_cast<Dog *>(bobby)));
+	std::cout << puppy->getColor() << std::endl;
+
+	std::cout << std::endl;
+
 	return 0;
 }

@@ -33,3 +33,18 @@ void Dog::playAnimal() {
 void Dog::feedAnimal() {
 	std::cout << "givi the bounes" << std::endl;
 }
+
+Dog *Dog::getChild(Dog &parent1, Dog &parent2) {
+	parent1.showGender();
+	parent2.showGender();
+	if (parent1.gender == parent2.gender || !parent1.gender || !parent2.gender)
+		{
+		std::cout << "cannot get child!!!" << std::endl;
+		return (NULL);
+	}
+	else {
+		Dog *child = new Dog();
+		child->setColor(rand()%2 ? parent1.color : parent2.color);
+		return (child);
+	}
+}

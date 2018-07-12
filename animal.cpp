@@ -34,3 +34,18 @@ void Animal::feedAnimal() {
 std::string const	&Animal::getColor() const {
 	return (color);
 }
+void Animal::showGender() {
+	if (gender == Gender::male)
+		std::cout << "male";
+	else if (gender == Gender::female)
+		std::cout << "female";
+	else
+		std::cout << "undefined";
+	std::cout << std::endl;
+}
+void Animal::setGender(Gender gender) {
+	this->gender = gender;
+}
+void Animal::setColor(std::string color) {
+	this->color = color;
+}
